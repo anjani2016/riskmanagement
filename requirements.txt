@@ -1,0 +1,15 @@
+# libraries
+
+# data 
+numpy
+pandas
+matplotlib
+seaborn
+scipy
+statsmodels
+
+# app
+
+
+streamlit
+
