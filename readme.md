@@ -1,0 +1,1 @@
+to run this file copy example.env to create your .env file
