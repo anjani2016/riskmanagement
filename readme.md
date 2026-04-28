@@ -24,7 +24,7 @@ to run this file copy example.env to create your .env file
 
 - Create a virtual environment: Open your terminal, navigate to your project directory and run ``` python3 -m venv .venv ```
 
-- Activate the environment:  ``` source .venv/bin/activate ```
+- Activate the environment:  ``` source risk_env/bin/activate ```
 
 
 
