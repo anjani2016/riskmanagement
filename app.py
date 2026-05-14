@@ -32,12 +32,14 @@ with st.sidebar:
         uploaded_file = st.file_uploader("Upload .xer or .csv file", type=["xer", "csv"])
         st.markdown("**For CSV files, recommended columns:**")
         st.info("`s.no.(aka task id)`, `task`, `early start`, `early finish`, `min duration`, `max duration`, `most likely duration`, `predecessor`, `successor`")
-        repeats = st.number_input("Repeats (Simulations)", value=1000, step=100)
+        repeats = st.number_input("Repeats (Simulations)", value=1000, step=100, max_value=10000)
+        st.caption("Max limit: 10,000 simulations to ensure app stability")
         trials = None # N/A for project
     else:
         uploaded_file = None
-        trials = st.number_input("Trials per Repeat", value=100, step=10)
-        repeats = st.number_input("Repeats (Sample Size)", value=1000, step=100)
+        trials = st.number_input("Trials per Repeat", value=100, step=10, max_value=10000)
+        repeats = st.number_input("Repeats (Sample Size)", value=1000, step=100, max_value=10000)
+        st.caption("Max limit: 10,000 per input to ensure app stability")
         
     run_btn = st.button("Run Simulation")
 
